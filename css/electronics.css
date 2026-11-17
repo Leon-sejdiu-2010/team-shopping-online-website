@@ -67,14 +67,31 @@ img {
 }
 
 .menu {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 10px 20px 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  color: #374151;
-  font-weight: 600;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.menu a {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu a:hover {
+  background: #111827;
+  color: #ffffff;
+}
+
+.menu a[href="electronics.html"] {
+  background: #ff6b35;
+  color: #ffffff;
 }
 
 .hero {
