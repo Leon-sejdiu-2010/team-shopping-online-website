@@ -140,16 +140,20 @@ h1 {
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x proximity;
 }
 
 .card {
+  flex: 0 0 290px;
   background: white;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #e7ebf2;
+  scroll-snap-align: start;
 }
 
 .card img {
@@ -208,7 +212,7 @@ h1 {
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    display: flex;
   }
 
   h1 {

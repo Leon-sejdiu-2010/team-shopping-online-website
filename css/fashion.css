@@ -491,16 +491,20 @@ button {
 }
 
 .product-row {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
     gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x proximity;
 }
 
 .product-card {
+    flex: 0 0 240px;
     background: rgba(255,255,255,0.8);
     border-radius: 22px;
     overflow: hidden;
     box-shadow: 0 16px 28px rgba(0,0,0,0.06);
+    scroll-snap-align: start;
 }
 
 .product-image {
@@ -576,7 +580,7 @@ button {
     }
 
     .product-row {
-        grid-template-columns: 1fr;
+        display: flex;
     }
 }
 
