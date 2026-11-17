@@ -156,16 +156,19 @@ img {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px 40px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
   gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
 }
 
 .product-card {
+  flex: 0 0 260px;
   background: #fff;
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+  scroll-snap-align: start;
 }
 
 .product-card h3 {
@@ -196,7 +199,7 @@ footer {
 
 @media (max-width: 900px) {
   .products {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
   }
 
   .hero {
